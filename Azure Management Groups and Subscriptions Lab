@@ -32,3 +32,21 @@ Azure Portal
 | Activity Logs                    | Monitoring and auditing               |
 
 
+                        Tenant Root Group
+                               │
+                 ┌─────────────┴─────────────┐
+                 │                           │
+        Management Group              Other Management Groups
+                 │
+         Azure Subscription
+                 │
+        Resource Group(s)
+                 │
+          Virtual Machines
+                 │
+         RBAC Assignments
+                 │
+            HelpDesk Group
+                 │
+    VM Contributor / Custom Role
+
