@@ -3,3 +3,13 @@ Overview
 This lab demonstrates how to use Azure Management Groups to organize subscriptions, implement Role-Based Access Control (RBAC), create custom roles, and monitor activities using Azure Activity Logs.
 The objective of this lab was to understand Azure governance and access management best practices in a real-world administrative scenario.
 
+Lab Objectives
+
+Create and manage Azure Management Groups
+Organize subscriptions logically
+Assign RBAC permissions using Azure AD groups
+Configure built-in and custom roles
+Understand RBAC inheritance
+Monitor administrative actions using Activity Logs
+Perform resource cleanup after completion
+
