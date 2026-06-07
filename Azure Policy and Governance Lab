@@ -1,0 +1,180 @@
+Azure Policy and Governance Lab
+
+Overview
+
+This lab focused on implementing governance in Microsoft Azure using Azure Policy and resource tagging.
+
+The objective was to enforce organizational standards, improve reporting, and maintain compliance across Azure resources using policies and remediation tasks.
+
+
+Lab Objectives
+
+Implement Azure governance using Azure Policy
+Apply and manage resource tags
+Enforce compliance using policy definitions
+Understand policy remediation
+Improve resource organization and reporting
+
+
+
+Technologies Used
+
+Microsoft Azure
+Azure Policy
+Azure Resource Groups
+Azure Tags
+Azure Policy Initiatives
+Azure Portal
+
+Lab Scenario
+
+An organization requires all Azure resources to include a **Cost Center** tag for governance, reporting, and cost tracking purposes.
+
+To achieve this:
+
+A Resource Group was created
+Tags were applied at the Resource Group level
+Azure Policy was used to enforce mandatory tagging
+Existing resources were remediated to inherit tags automatically
+
+
+rchitecture Diagram
+
+
+                Azure Subscription
+                        │
+                Azure Policy Assignment
+                        │
+         ┌──────────────┴──────────────┐
+         │                             │
+   Resource Group                Policy Initiative
+         │                             │
+   Cost_Center Tag             Tag Compliance Rules
+         │
+   Azure Resources
+         │
+ Tag Inheritance & Remediation
+
+
+Lab Steps
+
+1. Create a Resource Group
+
+A Resource Group was created to logically organize Azure resources.
+
+Applied Tag
+
+| Tag Name    | Value         |
+| ----------- | ------------- |
+| Cost_Center | IT-Operations |
+
+Purpose
+
+The tag identifies which department or business unit owns the resources.
+
+
+
+2. Enforce Tagging with Azure Policy
+
+An Azure Policy was assigned to enforce mandatory tagging.
+
+ Policy Used
+
+Require a tag on resources
+
+Configuration
+
+Required Tag Name: Cost_Center
+
+Behavior
+
+If a resource is created without the required tag:
+
+Resource creation is denied
+
+
+Azure Policy Flow
+
+
+User Creates Resource
+        │
+        ▼
+Azure Policy Evaluation
+        │
+ ┌──────┴──────┐
+ │             │
+Compliant   Non-Compliant
+ │             │
+Allow       Deny Creation
+
+
+3. Remediation Task
+
+A remediation task was executed to apply inherited tags from the Resource Group level to previously created resources.
+
+Result
+
+Existing resources automatically inherited:
+
+Cost_Center = IT-Operations
+
+
+
+Governance Concepts Learned
+
+Tags
+
+Tags help:
+
+Improve reporting
+Track ownership
+Monitor spending
+Organize resources
+Support governance policies
+
+ Azure Policy
+
+Azure Policy helps organizations:
+
+Enforce standards
+Maintain compliance
+Prevent misconfigurations
+Automate governance
+
+
+Policy Initiatives
+
+Multiple policies can be grouped together into:
+
+Initiatives
+
+This simplifies large-scale governance management.
+
+
+
+Key Takeaways
+
+Tags improve governance and reporting.
+Azure Policy can enforce organizational compliance.
+Policies can deny non-compliant resource creation.
+Remediation tasks help fix existing resources automatically.
+Policy Initiatives allow multiple policies to be managed together.
+
+
+
+Skills Demonstrated
+
+Azure Governance
+Azure Policy Management
+Resource Tagging
+Compliance Enforcement
+Cloud Administration
+Azure Resource Organization
+
+
+
+Author
+
+Khayelihle Mathebula
+
+AZ-104 Practical Labs 
