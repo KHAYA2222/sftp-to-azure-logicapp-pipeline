@@ -22,3 +22,13 @@ Azure Activity Logs
 JSON Role Definitions
 Azure Portal
 
+
+| Resource                         | Purpose                               |
+| -------------------------------- | ------------------------------------- |
+| Management Group                 | Logical organization of subscriptions |
+| HelpDesk Group                   | RBAC assignment target                |
+| Virtual Machine Contributor Role | VM management permissions             |
+| Custom RBAC Role                 | Customized access control             |
+| Activity Logs                    | Monitoring and auditing               |
+
+
