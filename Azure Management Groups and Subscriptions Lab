@@ -50,3 +50,117 @@ Azure Portal
                  │
     VM Contributor / Custom Role
 
+
+Lab Steps
+
+1. Create a Management Group
+
+A new Azure Management Group was created to logically organize subscriptions and apply governance controls at scale.
+
+Purpose
+Centralized governance
+Subscription organization
+RBAC inheritance
+Policy management
+2. Assign RBAC to a Group
+
+Instead of assigning permissions directly to users, a group named HelpDesk was used.
+
+Why Groups?
+Easier administration
+Better security management
+Reduced permission sprawl
+Simplified onboarding/offboarding
+3. Assign Built-in Role
+
+The following built-in role was assigned:
+
+Virtual Machine Contributor
+Permissions Included
+Start/Stop VMs
+Restart VMs
+Manage VM settings
+Permissions Excluded
+No access to RBAC changes
+No access to subscription ownership
+4. Create a Custom Role
+
+A custom RBAC role was created using a JSON definition.
+
+Objective
+
+Customize permissions beyond built-in Azure roles.
+
+Modification Performed
+Removed Microsoft Support-related actions/permissions
+Key Learning
+
+Azure custom roles are defined using JSON templates.
+
+Example structure:
+
+{
+  "Name": "Custom VM Operator",
+  "IsCustom": true,
+  "Actions": [],
+  "NotActions": [],
+  "AssignableScopes": []
+}
+RBAC Inheritance Concept
+
+Azure RBAC follows hierarchical inheritance.
+
+Permissions assigned at higher scopes automatically flow downward.
+
+Hierarchy Example
+Management Group
+    ↓
+Subscription
+    ↓
+Resource Group
+    ↓
+Resources
+
+This reduces repetitive role assignments and simplifies governance.
+
+Monitoring with Activity Logs
+
+Azure Activity Logs were used to monitor all administrative activities during the lab.
+
+Activities Tracked
+Management Group creation
+Role assignments
+Custom role creation
+Resource operations
+Cleanup actions
+Benefits
+Auditing
+Troubleshooting
+Security monitoring
+Compliance tracking
+Cleanup
+
+All lab resources were removed after testing to maintain a clean environment and avoid unnecessary resource usage.
+
+Key Takeaways
+Management Groups help organize and govern Azure subscriptions.
+RBAC supports both built-in and custom roles.
+Assigning roles to groups is a best practice.
+Azure custom roles are created using JSON.
+RBAC inheritance simplifies permission management.
+Activity Logs provide auditing and monitoring capabilities.
+Proper cleanup is an important operational practice.
+Skills Demonstrated
+Azure Governance
+Azure RBAC
+Identity and Access Management (IAM)
+Azure Administration
+Cloud Security Fundamentals
+Monitoring and Auditing
+Subscription Organization
+Author
+
+Khayelihle Mathebula
+
+Azure Administration & Cloud Security Enthusiast
+
