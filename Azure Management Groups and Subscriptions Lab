@@ -13,3 +13,12 @@ Understand RBAC inheritance
 Monitor administrative actions using Activity Logs
 Perform resource cleanup after completion
 
+Technologies Used
+
+Microsoft Azure
+Azure Management Groups
+Azure RBAC
+Azure Activity Logs
+JSON Role Definitions
+Azure Portal
+
